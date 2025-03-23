@@ -1,6 +1,3 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "terminal.integrated.env.windows": {
-    "BASE_DIR": "/test/"
-  }
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

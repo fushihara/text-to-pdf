@@ -1,8 +1,10 @@
 import { resolve } from "node:path";
-import { defineConfig } from 'vite'
+import { defineConfig ,loadEnv} from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite';
+const env = loadEnv("",process.cwd(),"")
 const BASE_DIR = (() => {
-  let dir = String(process.env.BASE_DIR ?? "/").trim();
+  let dir = String(env.BASE_DIR ?? "/").trim();
   if (dir == "") {
     dir = "/";
   }
@@ -11,14 +13,18 @@ const BASE_DIR = (() => {
   }
   throw new Error(`BASE_DIRは空文字かスラッシュで囲う必要があります`)
 })();
-
+console.log(`BASE_DIR:[${BASE_DIR}]`);
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),tailwindcss()],
   base: BASE_DIR,
   root: resolve(__dirname, "src/pages"),
   // root基準
   publicDir: "./public-dir",
+  preview: {
+    host: true,
+    port: 52767,
+  },
   build: {
     assetsInlineLimit: 1 * 1024,
     emptyOutDir: true,

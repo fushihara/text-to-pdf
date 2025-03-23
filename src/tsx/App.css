@@ -1,0 +1,7 @@
+@import "tailwindcss" source("../");
+@layer components {
+  .reset {
+    all: revert;
+    box-sizing: border-box;
+  }
+}

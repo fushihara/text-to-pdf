@@ -16,3 +16,6 @@ Phomemo用のテキストpdf化ツール。
 
 デプロイ用ファイル作成コマンド
 > npx vite build
+
+# Warning！
+このレポジトリは公開しているので注意！

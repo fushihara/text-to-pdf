@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "Node16",
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
+    "strict": true,
+    "moduleResolution": "Node16",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "ts-node": {
+    "files": true,
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}
